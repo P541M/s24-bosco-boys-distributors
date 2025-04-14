@@ -24,6 +24,15 @@ const S24WorkTermReport = () => {
         id="s24-work-term-report"
         className="w-full px-6 sm:px-8 md:px-12 lg:px-16"
       >
+        {/* Back to Portfolio Button */}
+        <div className="fade-up mb-8">
+          <a
+            href="https://p541m.github.io/portfolio/"
+            className="inline-block rounded-lg bg-primary px-4 py-2 text-lg font-semibold text-bgContrast shadow-md transition duration-300 hover:bg-bgContrast hover:text-text"
+          >
+            Back to Portfolio
+          </a>
+        </div>
         <h2 className="fade-up mb-10 text-left text-4xl font-bold leading-snug text-text">
           My Journey as a Fullstack Developer & Business Analyst Intern at
           BoscoBoys
