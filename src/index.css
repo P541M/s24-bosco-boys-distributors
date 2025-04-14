@@ -1,87 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom scrollbar styles */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
+/* Importing fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
-::-webkit-scrollbar-thumb {
-  background-color: #bdbdbd;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #9e9e9e;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
-}
-
+/* Base styles */
 body {
-  @apply bg-bg text-text;
-  font-family: "Inter", sans-serif;
+  @apply bg-bg;
+  font-family: "Montserrat", sans-serif;
   padding-top: env(safe-area-inset-top);
   padding-right: env(safe-area-inset-right);
   padding-bottom: env(safe-area-inset-bottom);
   padding-left: env(safe-area-inset-left);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Syne", sans-serif;
-}
-
-@layer components {
-  .section-container {
-    @apply mx-auto max-w-6xl px-6 py-16 sm:px-8 md:px-12 lg:px-16;
-  }
-
-  .section-title {
-    @apply relative mb-12 text-center font-heading text-3xl font-bold;
-  }
-
-  .section-title::after {
-    content: "";
-    @apply absolute bottom-0 left-1/2 mt-3 h-1 w-16 -translate-x-1/2 transform bg-primary;
-  }
-
-  .card {
-    @apply rounded-lg border border-divider bg-card shadow-sm transition-all duration-300 hover:shadow-md;
-  }
-
-  .btn-primary {
-    @apply flex items-center justify-center rounded-lg bg-primary px-6 py-3 font-medium text-white shadow-sm transition-all duration-300 hover:bg-opacity-90 hover:shadow;
-  }
-
-  .btn-secondary {
-    @apply flex items-center justify-center rounded-lg bg-secondary px-6 py-3 font-medium text-text shadow-sm transition-all duration-300 hover:bg-opacity-90 hover:shadow;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-.fade-in-two {
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-.fade-out {
-  animation: fadeOut 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
+/* Keyframe animations */
+@keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(10px);
@@ -92,49 +27,60 @@ h6 {
   }
 }
 
-@keyframes fadeOut {
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+  }
+}
+
+@keyframes fadeOutBackground {
   from {
     opacity: 1;
+    backdrop-filter: blur(5px);
   }
   to {
     opacity: 0;
+    backdrop-filter: blur(0);
   }
 }
 
-/* Add these styles to index.css */
-
-/* Add spacing for work term report pages */
-.work-term-report-page {
-  padding-top: 80px; /* Adjust based on navbar height */
+/* Applying animations */
+.fade-up {
+  animation: fadeUp 1s ease-in-out;
 }
 
-/* Ensure proper spacing for content under fixed navbar */
-.content-wrapper {
-  padding-top: var(--navbar-height, 60px);
+.fade-up-two {
+  animation: fadeUp 1.5s ease-in-out;
 }
 
-/* Make sure headings don't get hidden under the navbar when jumping to sections via anchors */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  scroll-margin-top: 80px; /* Adjust based on navbar height */
+.fade-up-three {
+  animation: fadeUp 2s ease-in-out;
 }
 
-/* Additional responsive adjustments */
-@media (max-width: 768px) {
-  .work-term-report-page {
-    padding-top: 70px; /* Slightly shorter on mobile */
+.fade-up-four {
+  animation: fadeUp 2.5s ease-in-out;
+}
+
+.fade-in-background {
+  animation: fadeInBackground 0.5s ease-in-out;
+}
+
+.fade-out-background {
+  animation: fadeOutBackground 0.5s ease-in-out;
+}
+
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    scroll-margin-top: 70px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
