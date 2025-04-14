@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/s24-bosco-boys-distributors/static/css/main.0d251964.css",
+    "main.js": "/s24-bosco-boys-distributors/static/js/main.1f2fee06.js",
+    "static/media/me.jpeg": "/s24-bosco-boys-distributors/static/media/me.cf0f4aac8ab649bb318a.jpeg",
+    "static/media/bosco.PNG": "/s24-bosco-boys-distributors/static/media/bosco.f6ca30d42a2a35357cbd.PNG",
+    "static/media/work.jpeg": "/s24-bosco-boys-distributors/static/media/work.c9cae8348be04d20f609.jpeg",
+    "static/media/disperse.PNG": "/s24-bosco-boys-distributors/static/media/disperse.1bd25c2fa297c6ca8d24.PNG",
+    "index.html": "/s24-bosco-boys-distributors/index.html",
+    "main.0d251964.css.map": "/s24-bosco-boys-distributors/static/css/main.0d251964.css.map",
+    "main.1f2fee06.js.map": "/s24-bosco-boys-distributors/static/js/main.1f2fee06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d251964.css",
+    "static/js/main.1f2fee06.js"
+  ]
+}
