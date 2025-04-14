@@ -6,23 +6,17 @@ import {
   UserGroupIcon,
   LightBulbIcon,
 } from "@heroicons/react/24/solid";
-import { useNavigate } from "react-router-dom";
 import image1 from "./assets/s24/me.jpeg";
 import image2 from "./assets/s24/work.jpeg";
 import image3 from "./assets/s24/disperse.PNG";
 import image4 from "./assets/s24/bosco.PNG";
 
 const S24WorkTermReport = () => {
-  const navigate = useNavigate();
   const [goal1Open, setGoal1Open] = useState(false);
   const [goal2Open, setGoal2Open] = useState(false);
   const [goal3Open, setGoal3Open] = useState(false);
   const [goal4Open, setGoal4Open] = useState(false);
   const [goal5Open, setGoal5Open] = useState(false);
-
-  const handleBack = () => {
-    navigate(-1);
-  };
 
   return (
     <div className="mt-16 flex justify-center px-4 sm:mt-20 sm:px-8 md:mt-24 md:px-16 lg:mt-28 lg:px-20">
@@ -30,13 +24,6 @@ const S24WorkTermReport = () => {
         id="s24-work-term-report"
         className="w-full px-6 sm:px-8 md:px-12 lg:px-16"
       >
-        <button
-          onClick={handleBack}
-          className="fade-up mb-12 inline-flex items-center rounded-md bg-bgContrast px-5 py-3 text-sm text-text transition duration-300 ease-in-out hover:bg-primary hover:text-bgContrast"
-        >
-          ← Back to Portfolio
-        </button>
-
         <h2 className="fade-up mb-10 text-left text-4xl font-bold leading-snug text-text">
           My Journey as a Fullstack Developer & Business Analyst Intern at
           BoscoBoys
